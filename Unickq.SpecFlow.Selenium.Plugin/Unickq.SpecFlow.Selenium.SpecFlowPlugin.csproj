@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+    <PackageId>Unickq.SpecFlow.Selenium</PackageId>
+    <Version>1.3.0</Version>
+    <Authors>Nick Chursin</Authors>
+    <Description>Test class generator to drive automated web ui tests with Selenium and SpecFlow 2.4 Works with BrowserStack, SauceLabs, TestingBot, CrossbrowserTesting and any WebDriver grid.  Based on Baseclass.Contrib.SpecFlow.Selenium.NUnit.</Description>
+    <PackageProjectUrl>https://github.com/unickq/SpecFlow.Selenium.Plugin</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/unickq/SpecFlow.Selenium.Plugin/master/logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/unickq/SpecFlow.Selenium.Plugin</RepositoryUrl>
+    <PackageTags>specflow selenium nunit automation qa test bdd</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyName>Unickq.SpecFlow.Selenium.SpecFlowPlugin</AssemblyName>
+    <RootNamespace>Unickq.SpecFlow.Selenium</RootNamespace>
+    <FileVersion>1.3.0</FileVersion>
+    <PackageLicenseUrl>https://github.com/unickq/SpecFlow.Selenium.Plugin/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageReleaseNotes>SpecFlow 2.4 support. Better generation support and exception handling</PackageReleaseNotes>
+    <AssemblyVersion>1.3.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.14.0" />
+    <PackageReference Include="SpecFlow.CustomPlugin" Version="2.4.0">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="SpecFlow" Version="2.4.0">
+      <ExcludeAssets>build</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="Autofac" Version="[3.5.2]">
+      <ExcludeAssets>build</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="Autofac" Version="[3.5.2]">
+      <ExcludeAssets>build</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="Autofac.Configuration" Version="[3.3.0]">
+      <ExcludeAssets>build</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config.transform" Pack="true">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
